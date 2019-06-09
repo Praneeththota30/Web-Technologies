@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+TODO:
+1.Enter your name in h1 and designation in h3
+2.Replace all the placeholder images with suitable images of the same size reflecting you and your projects.Feel free to use the sample images provided
+3.Replace the content of headings App1,App2,App3,App4 with suitable headings of your projects & provide their github links in the corresponding links
+4.Make all the elements in the page responsive & align its content as shown in the output sample with the aforementioned using bootstrap
+
+
+
+-->
+
+
+
+<!DOCTYPE html>
+
+<!--
+TODO:
+1.Enter your name in h1 and designation in h3
+2.Replace all the placeholder images with suitable images of the same size reflecting you and your projects.Feel free to use the sample images provided
+3.Replace the content of headings App1,App2,App3,App4 with suitable headings of your projects & provide their github links in the corresponding links
+4.Make all the elements in the page responsive & align its content as shown in the output sample with the aforementioned using bootstrap
+-->
+
+
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }}
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      border-bottom: 1px solid #ccc;
+    }
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+    }
+    body {
+      background-color: grey;
+    }
+  </style>
+</head>
+<!-- added family font -->
+<body style="font-family:Lato,sans-serif">
+<!-- taken container-->
+<div class="container text-center">
+  <div class="row">
+    <!-- image is placed in span 1-->
+    <div class="col-sm-1">
+      <div class="nav navbar-nav navbar-left">
+      <img src="https://raw.githubusercontent.com/Praneeththota30/Web-Technologies/master/ICPs/ICP2/Documentation/WhatsApp%20Image%202019-06-08%20at%208.39.25%20PM.jpeg" class="img-responsive" style="width:150px;height:150px;>
+    </div>
+    </div>
+    <!-- used hexadecimal color-->
+
+    <div class="nav navbar-nav navbar-right">
+      <h1 style="color:black" align="left" >Praneeth Thota</h1>
+      <h3 style="color:black" align="left">Masters</h3>
+    </div>
+  </div>
+  <!-- added horizontal line-->
+  <hr style="border-top:5px  solid gray">
+</div>
+
+<!-- added responsive image-->
+<div class="container text-center">
+  <div class="row">
+    <!-- placed image in span of 12-->
+    <div class="col-sm-12">
+      <img src="https://raw.githubusercontent.com/Praneeththota30/Web-Technologies/master/ICPs/ICP2/Documentation/Image.png" class="img-responsive" style="width:100%;height:300px" alt="Image">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container text-center">
+  <h2 style="color:black"> LIST </h2>
+  <div class="row">
+    <!-- taken span 4 as we need 12 to be distributed for 3-->
+    <div class="col-sm-4">
+      <img src="https://raw.githubusercontent.com/Praneeththota30/Web-Technologies/master/ICPs/ICP2/Documentation/app1.png" class="img-responsive" style="width:100%;height:266px" alt="Image">
+      <h3 style="color:black">APP</h3>
+      <p><a href="https://raw.githubusercontent.com/Praneeththota30/Web-Technologies/master/ICPs/ICP2/Documentation/app1.png">Link to project</a></p>
+    </div>
+
+    <div class="col-sm-4">
+      <img src="https://raw.githubusercontent.com/Praneeththota30/Web-Technologies/master/ICPs/ICP2/Documentation/app2.png" class="img-responsive" style="width:100%;height:266px" alt="Image">
+      <h3 style="color:black" >FLORA</h3>
+      <!-- the link is clickable-->
+      <p><a href="https://raw.githubusercontent.com/Praneeththota30/Web-Technologies/master/ICPs/ICP2/Documentation/app2.png">Link to project</a></p>
+    </div>
+
+    <div class="col-sm-4">
+      <img src="https://raw.githubusercontent.com/Praneeththota30/Web-Technologies/master/ICPs/ICP2/Documentation/app3.png" class="img-responsive" style="width:100%;height:266px" alt="Image">
+      <h3 style="color:black">FAUNA</h3>
+      <p><a href="https://raw.githubusercontent.com/Praneeththota30/Web-Technologies/master/ICPs/ICP2/Documentation/app3.png">Link to project</a></p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
