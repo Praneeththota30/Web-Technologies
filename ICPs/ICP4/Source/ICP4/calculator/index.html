@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>AngularJS Calculator</title>
+        <script src="lib/angular.min.js"></script>
+        <script src="scripts/angularCalculator.js"></script>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body ng-app="calculator" ng-controller="calculatorCtrl">
+        <div class="whole-container">
+            <div class="result-container">
+                {{firstValue || 0 }}
+                <span ng-if="currentModifier">{{currentModifier}}</span> 
+                <span ng-if="secondValue">{{ secondValue }}</span>
+                <span ng-if="result" class="result-item"> = {{ result }}</span>
+                <button class="clear-button" ng-click="clearNumbers()">Clr</button>
+            </div>
+            <div class="number-modify-container">
+                <div class="number-container">
+                    <div class="number-inner-container" ng-repeat="num in numArr">
+                        <button class="number-item"  ng-click="showNumber(num)" >{{ num }}</button>
+                        <button class="number-item" ng-if="$index == 9" ng-click="doMath()"> = </button>
+                    </div>
+                    
+                </div>
+                <div class="modify-container">
+                    <button class="modify-item" ng-repeat="mod in modifiers"   ng-click="makeSecondValue(mod)">{{ mod }}</button>
+                    
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

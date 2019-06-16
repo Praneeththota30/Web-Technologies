@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+<script src="todo.js"></script>
+<link rel="stylesheet" href="main.css">
+<body ng-app="myApp" ng-controller="todoCtrl">
+
+<h2>Todo List</h2><br>
+<div ng-controller="todoCtrl as todoList">
+    <form ng-submit="todoAdd()"><br><br>
+        <input type="text" ng-model="todoInput" size="50" placeholder="ADD">
+        <input style="background: #09d481;border-radius: 3px;color: white" type="submit" value="Add New"/>
+    </form>
+
+    <br>
+    <!--display loop-->
+
+    <div style="    background: white;
+    width: 60%;
+    height: 43px;
+    margin-left: 20%;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left;" ng-repeat="x in todoList">
+        <input type="checkbox" ng-model="x.done">
+        <!-- code to strike off if it is true-->
+        <span class="done-{{x.done}}" >{{x.todoText}}</span>
+        <button style="    background: none;
+    border: none;
+    float: right;" ng-click="remove(x.todoText)"><i class="fa fa-trash donecl-{{x.done}} " aria-hidden="true"></i>
+
+        </button>
+
+    </div>
+    <!-- for remove-->
+    <!-- todisplay remaining process-->
+    <span>{{remaining()}} of {{todoList.length}} remaining</span>
+
+    <script>
+    </script>
+
+</body>
+</html>
