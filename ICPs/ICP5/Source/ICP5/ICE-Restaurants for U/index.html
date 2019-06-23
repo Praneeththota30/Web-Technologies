@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+
+        .menu input {
+            width: 300px;
+            background: transparent;
+            border: 2px solid #1ab188;
+            border-radius: 4px;
+            color: white;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 6px;
+            margin-top: 10px;
+        }
+
+        .menu button {
+            width: 419px;
+            height: 40px;
+            background: aquamarine;
+            border: 2px solid #ffffff;
+            cursor: pointer;
+            border-radius: 4px;
+            color: darkslategray;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 6px;
+            margin-top: 10px;
+        }++
+
+        table {
+            max-width: 960px;
+            margin: 10px auto;
+            border: 1px solid #FFF;
+
+        }
+
+        caption {
+            font-size: 1.6em;
+            font-weight: 400;
+            padding: 10px 0;
+        }
+
+        thead th {
+            font-weight: 400;
+            background: none;
+            color: #FFF;
+        }
+
+        tr {
+            background: none;
+            border: 1px solid #FFF;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        tr:nth-child(even) {
+            background: none;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 20px;
+            font-weight: 300;
+        }
+
+        tfoot tr {
+            background: none;
+        }
+
+        tfoot td {
+            padding: 10px 2px;
+            font-size: 0.8em;
+            font-style: italic;
+            color: #8a97a0;
+        }
+
+        body {
+            /* The image used */
+            background-image: url("https://growthfairs.com/wp-content/uploads/2018/12/restaurant-featured-images.jpg");
+
+            /* Full height */
+
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: repeat-x;
+
+        }
+
+
+    </style>
+
+</head>
+
+<body class="body">
+
+<div ng-controller="View1Ctrl" style="top: 200px">
+
+    <div class="menu" id="div_SearchContainer">
+        <h1 style="color: papayawhip; text-align:center"  >Restaurants near me</h1>
+        <input type="text" id="txt_placeName" placeholder="Enter the place you want to search for"
+               style="margin-left: 100px; text-color: white "/>
+        <input type="text" id="txt_searchFilter" placeholder="Enter the search query"/>
+        <button id="btn_getReview" style="background-color: lightgoldenrodyellow" ng-click="getVenues()">Get Venues</button>
+    </div>
+
+    <div id="div_VenueList">
+        <h2 style="text-align: center; color: palegoldenrod"> Top Five Picks From FourSquare Review API </h2>
+        <table  class="table" style="width:54%;margin-left: 296px;" ng-if="venueList.length > 0"> <!--displays only if a result is fetched-->
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>city</th>
+                <th>Address</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="venue in venueList">
+                <td>{{venue.name}}</td>
+                <td>{{venue.location.city}}</td>
+                <td>{{venue.location.address + " " +venue.location.crossStreet}}</td>
+
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>

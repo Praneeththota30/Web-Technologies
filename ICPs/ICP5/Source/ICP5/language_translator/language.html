@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Translator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="language.js"></script>
+    <style>
+        .trans {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body ng-app="myapp" ng-controller="mycontroller" style="background-color: grey">
+<div class="container"><br>
+    <div class="trans">
+        <h1 style="text-align: center"> Language Translator</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="SourceLanguage">Convert from</label>
+                <select name="repeatSelect" id="source" ng-model="data.model" class="form-control">
+                    <option ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.name}}</option>
+                </select>
+                <textarea rows="1" class="form-control" id="SourceLanguage" style="color:blue;font-size: 30px;">
+            </textarea><br>
+                <button type="button" class="btn btn-success" style="background-color: #1ab188;align:center;margin-left: 96%; "  ng-click="translate()">Translate</button>
+            </div>
+            <div class="col-sm-6">
+                <label for="DestLanguage">Translate to</label>
+                <select name="repeatSelect" id="destination" ng-model="data1.model" class="form-control">
+                    <option ng-repeat="option in data1.availableOptions" value="{{option.id}}">{{option.name}}</option>
+                </select>
+                <textarea class="form-control" rows="1" id="DestLanguage" style="color:green;font-size: 30px;">{{text}}</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
