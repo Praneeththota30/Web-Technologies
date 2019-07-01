@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+      max-height: 500px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+      
+      .container img {
+          height: 200px;
+      }
+      .card img {
+        height: 200px;
+        width: 200px;
+          display: inline;
+      }
+      .card p {
+          display: inline;
+      }
+  </style>
+</head>
+<body>
+
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding: 0 100px 0 100px">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="eee_banner1.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="eee_banner2.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+  
+<div class="container text-center">    
+  <h3></h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="admissions.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p></p>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="scholarship.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p></p>    
+    </div>
+    <div class="col-sm-4">
+     <img src="career.png" class="img-responsive" style="width:100%" alt="Image">
+      <p></p> 
+    </div>
+  </div>
+</div><br>
+
+<div class="row">
+<div class="col-sm-3"> 
+</div>
+<div class="col-sm-6"> 
+    
+    <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Subjects offered</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <ul class="list-group">
+        <li class="list-group-item">Fashion: Textiles and Clothing in Business, BS</li>
+        <li class="list-group-item">Network Technology, BS</li>
+        <li class="list-group-item">Systems Engineering Technology, BS</li>
+          <li class="list-group-item">Technology Management (2+2), BS</li>
+          <li class="list-group-item">Technology Management, BS</li>
+          <li class="list-group-item">Advanced Vehicle Systems Certificate</li>
+          <li class="list-group-item">Applied Lean Six Sigma Quality Certificate</li>
+          <li class="list-group-item">Robotics Automation Certificate</li>
+          <li class="list-group-item">Technology Certificate</li>
+          <li class="list-group-item">Special Topics in Computer Science</li>
+      </ul>
+        
+        </div>
+    </div>
+  </div>
+        
+        <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Faculty details</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse in">
+      <div class="panel-body">
+          <div class="card-deck">
+  <div class="card ">
+
+  <img class="card-img-top" src="prof7.jpg" alt="Card image">
+      <span>Dr. Steve received his Ph.D. and joined the University of Missouri in 1992.</span>
+  <div class="card-body">
+    <h4 class="card-title">Dr Steve Smith</h4>
+   
+    
+  </div>
+
+    
+  </div>
+              <div class="card ">
+                  
+  <img class="card-img-top" src="prof8.jpg" alt="Card image">
+                  <span>Prof Wick received his B.S. from Northeastern University</span>
+  <div class="card-body">
+    <h4 class="card-title">Prof John Wick</h4>
+
+  </div>
+
+    
+  </div>
+              <div class="card ">
+          
+  <img class="card-img-top" src="prof9.jpg" alt="Card image">
+                  <span>Dr. Wang received his B.S. in from the University of Nebraska in 1985</span>
+  <div class="card-body">
+    <h4 class="card-title">Dr Wang Li</h4>
+    
+  </div>
+   
+  </div>
+  
+</div>
+                
+        </div>
+    </div>
+  </div>
+
+   
+</div>    
+<div class="col-sm-3"> 
+</div>   
+    
+    </div>
+    </div>
+<footer class="container-fluid text-center">
+  <a href="https://www.cs.umkc.edu">eee.umkc.edu</a>
+</footer>
+
+</body>
+</html>

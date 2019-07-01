@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font: inherit;
+
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #1abc9c;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:gray;
+            width: 100%;
+
+
+
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        }
+
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+
+
+
+        #menu ul{
+            list-style:none;
+
+        }
+
+        #menu ul li{
+            background-color : #1abc9c;
+
+            width : 200px;
+            line-height:35px;
+            text-align : center;
+            position:relative;
+            border-radius:8px;
+        }
+
+        #menu ul li a{
+            text-decoration:none;
+            color:white;
+            display:block;
+        }
+
+        #menu ul li a:hover{
+            background-color : orchid;
+            border-radius:8px;
+        }
+        #menu ul ul{
+            position:absolute;
+            display:none;
+            margin-left:180px;
+            top:0px;
+        }
+
+        #menu ul li:hover > ul
+        {
+
+            display:block;
+        }
+        #menu ul ul ul
+        {
+            margin-left:180px;
+            top:0px;
+        }
+    </style>
+</head>
+<body style="background-color:#1abc9c">
+
+<h1 style="text-align: center;font-family: 'Comic Sans MS';color: purple">Team - 2 Lab Assignment-1</h1>
+<div class="navbar">
+
+    <div class="dropdown">
+
+
+        <button class="dropbtn"> &#9776; Categories
+
+        </button>
+
+        <div class="dropdown-content">
+
+            <div id="menu">
+                <ul>
+
+                    <li> <a href="#"> <span class="fa fa-fw fa-home"/>Home </a></li>
+                    <li> <a href="#"> <span class="fa fa-user fa-sm" aria-hidden="true" />User Account details  <span class="fa fa-caret-right"/> </a>
+                        <ul>
+                            <li> <a href="loggedinuser.html" target="_blank">Logged in user </a> </li>
+                            <li> <a href="guestuser.html" target="_blank">Guest user </a> </li>
+
+
+
+                        </ul>
+
+                    </li>
+                    <li> <a href="#"><span class="fa fa-cart-plus"/>Order details  <span class="fa fa-caret-right"/></a>
+                        <ul>
+                            <li> <a href="recentorders.html" target="_blank">Recent orders </a> </li>
+                            <li> <a href="oldorders.html" target="_blank">Old orders </a> </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li> <a href="#"><span class="fa fa-product-hunt"/>Products Details <span class="fa fa-caret-right"/></a>
+                        <ul>
+                            <li> <a href="development.html" target="_blank">Development</a> </li>
+                            <li> <a href="business.html" target="_blank">Business </a> </li>
+                            <li> <a href="software.html" target="_blank">IT & Software </a> </li>
+                            <li> <a href="#">Design <span class="fa fa-caret-right"/> </a>
+                                <ul>
+                                    <li>All Designs</a> </li>
+                                    <li> <a href="web.html" target="_blank">Web design</a> </li>
+                                    <li> <a href="graphic.html" target="_blank">Graphic design</a> </li>
+                                    <li> <a href="design.html" target="_blank">Design Tools</a> </li>
+                                    <li> <a href="game.html" target="_blank">Game Design</a> </li>
+
+
+                                </ul>
+
+
+                            </li>
+
+
+
+                        </ul>
+                    </li>
+
+                    <li> <a href="#"> <span class="fa fa-book"/> Course details  <span class="fa fa-caret-right"/></a>
+
+                        <ul>
+                            <li> <a href="#" target="_blank">All Courses</a> </li>
+                            <li> <a href="cs.html" target="_blank">Computer Science</a> </li>
+                            <li> <a href="electrical.html" target="_blank">Electrical</a> </li>
+                            <li> <a href="eee.html" target="_blank">Electronics Engg</a> </li>
+                            <li> <a href="civil.html" target="_blank">Civil</a> </li>
+
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <a href="about.html" target="_blank">About</a>
+    <a href="contact.html" target="_blank">Contact</a>
+
+    </button>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            align-content: inherit;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body align="middle" style="background-image: linear-gradient(to right,pink,deeppink);">
+
+<h1>Old orders</h1>
+
+
+<div class="flip-card" style="margin:0 auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="book.jpeg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>Introduction to Statistical Learning</h1>
+            <p>Ordered Date:5-June-2018</p>
+            <p>Cost:15$</p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="flip-card" style="margin:0 auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="shirt.jpeg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>Women's T-Shirt</h1>
+            <p>Ordered Date:18-May-2018</p>
+            <p>Cost:20$</p>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="flip-card" style="margin:0 auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="bag.jpeg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>Michael Kors Handbag</h1>
+            <p>Ordered Date:1-May-2018r</p>
+            <p>Cost:120$</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

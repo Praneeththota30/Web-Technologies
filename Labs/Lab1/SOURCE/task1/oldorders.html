@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            align-content: inherit;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body align="middle" style="background-image: linear-gradient(to right,white,gray);">
+
+<h1>Old orders</h1>
+
+
+<div class="flip-card" style="margin:0 auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="o1.jpeg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>Beats headphones</h1>
+            <p>Ordered Date:5-June-2016</p>
+            <p>Cost:300$</p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="flip-card" style="margin:0 auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="iphonex.jpeg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>IPhone X</h1>
+            <p>Ordered Date:18-May-2015</p>
+            <p>Cost:1000$</p>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="flip-card" style="margin:0 auto;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="perfume.jpeg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+            <h1>Gucci Perfume</h1>
+            <p>Ordered Date:1-May-2014</p>
+            <p>Cost:500$</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
